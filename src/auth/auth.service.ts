@@ -52,4 +52,8 @@ export class AuthService {
       throw new UnauthorizedException('login failed');
     }
   }
+
+  async getAllUser(): Promise<User[]> {
+    return this.userRepository.find();
+  }
 }
